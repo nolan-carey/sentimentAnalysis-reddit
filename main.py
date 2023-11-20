@@ -6,13 +6,14 @@ from datetime import datetime
 import pytz
 import config
 
+
 # Download the VADER lexicon for sentiment analysis
 nltk.download("vader_lexicon")
 
 # Initialize sentiment analyzer
 sia = SentimentIntensityAnalyzer()
 
-# Reddit credentials
+# Reddit credentials i have stored in a config.py file
 reddit = praw.Reddit(
     client_id=config.client_id,
     client_secret=config.client_secret,
